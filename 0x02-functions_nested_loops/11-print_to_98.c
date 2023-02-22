@@ -1,14 +1,31 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
- * add -add two values
- * @n1: The first number to be computed
- * @n2: the second number to be computed
- * Return: Interger Value
+ * print_to_98 - print all natural numbers form n to 98
+ * followed by a new line
+ * @n: print from this number
  */
 
-int add(int n1, int n2)
-
+void print_to_98(int n)
 {
-	return (n1 + n2);
+	int i, j;
+
+	if (n <= 98)
+	{
+		for (i = n; i <= 98; i++)
+		{
+			if (i != 98)
+				printf("%d, ", i);
+		}
+	}else if (n >= 98)
+	{
+		for (j = n; j >= 98; j--)
+		{
+			if (j != 98)
+				printf("%d, ", j);
+			else if (j == 98)
+				printf("%d\n", j);
+		}
+	}
 }
